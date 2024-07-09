@@ -3,7 +3,7 @@
 `DataStream<>` is the core abstraction of Flink. It represents a stream of elements of the same type. It is a distributed collection of data elements that are processed in parallel. Transformations for DataStreams are acoomplished by creating new DataStream objects of the desired type.
 ### Stream Processing
 How operators and stream processing works in Flink.
-![alt text](image-3.png)
+![alt text](./figures/image-3.png)
 
 ## Operators
 Operators are the core building blocks of Flink programs. They are used to define the data transformations that are applied to the input data streams.
@@ -96,7 +96,7 @@ stream.join(otherStream)
 ```
 
 #### Tumbling Window Join
-![alt text](image-2.png)
+![alt text](./figures/image-2.png)
     
 ```java
 import org.apache.flink.api.java.functions.KeySelector;

@@ -7,7 +7,7 @@ This framework allows you to define computational methods used for processing wh
 Data can be sourced through two ways, either by batch or by stream like Kafka, in type DataStream<string>.
 
 ## Levels of Abstraction
-![alt text](image.png)
+![alt text](./figures/image.png)
 
 - [**DataStream API**](./DataStreamAPI.md): This is the core API for processing. DataSet API is the older version of the DataStream API, used for batch processing.
 - **Table API**: Declarative DSL( Domain Specific Language) for processing data.
@@ -15,7 +15,7 @@ Data can be sourced through two ways, either by batch or by stream like Kafka, i
 
 ## Architecture
 Flink is a distributed system and requires effective allocation and management of compute resources in order to execute streaming applications.
-![alt text](image-1.png)
+![alt text](./figures/image-1.png)
 
 
 ## Anatomy of a Flink Program
