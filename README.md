@@ -22,3 +22,25 @@ To stop the cluster, run
 $ ./bin/stop-cluster.sh
 ```
 
+## Run program
+1. After starting Flink cluster, run the following command in 'frauddetection" to run the program
+
+```bash
+mvn clean package
+```
+2. Compile the program
+```bash
+mvn compile
+```
+3. Test to see if the program compiled successfully
+```bash
+mvn exec:java
+```
+
+4. Go to `$FLINK_HOME` and run the following command to run the program
+```bash
+./bin/flink run -c spendreport.FraudDetection target/flink-fraud-detection-0.1.jar
+```
+This submits the jar file to the Flink cluster and runs the program.
+
+![alt text](./figures/running_program.png)

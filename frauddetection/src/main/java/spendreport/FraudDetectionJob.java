@@ -34,16 +34,18 @@ public class FraudDetectionJob {
 		
 
 		DataStream<Transaction> transactions = env
-			.addSource(new TransactionSource())
-			.name("transactions");
+			.addSource(new TransactionSource()) //Sources ingest data from external systems
+			.name("transactions"); //for debugging purposes
 
 		DataStream<Alert> alerts = transactions
+			// Fraud occurs on a per-account basis, so we need to group transactions by account ID
+			// to ensure that all transactions for the same account are processed by the same parallel task of the fraud detector operator
 			.keyBy(Transaction::getAccountId)
-			.process(new FraudDetector())
+			.process(new FraudDetector()) // immediately after a KeyBy operation, we can say the key is executed within a keyed context
 			.name("fraud-detector");
 
 		alerts
-			.addSink(new AlertSink())
+			.addSink(new AlertSink()) //Sinks write data to external systems
 			.name("send-alerts");
 
 		env.execute("Fraud Detection");
