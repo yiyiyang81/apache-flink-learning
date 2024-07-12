@@ -23,15 +23,12 @@ $ ./bin/stop-cluster.sh
 ```
 
 ## Run program
-1. After starting Flink cluster, run the following command in 'frauddetection" to run the program
-
+1. After starting Flink cluster, run the following command in `frauddetection` folder to run the program
 ```bash
 mvn clean package
 ```
-2. Compile the program
-```bash
-mvn compile
-```
+`clean` removes the `target` directory and `package` compiles the program and creates a jar file in the `target` directory. `package` phase includes the `compile` phase in the [Maven lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html).
+
 3. Test to see if the program compiled successfully
 ```bash
 mvn exec:java
@@ -42,5 +39,8 @@ mvn exec:java
 ./bin/flink run -c spendreport.FraudDetection target/flink-fraud-detection-0.1.jar
 ```
 This submits the jar file to the Flink cluster and runs the program.
+
+## Flink Dashboard UI
+The following image shows the Flink UI while running the program the program. The Web UI is accessible at `http://localhost:8081/`.
 
 ![alt text](./figures/running_program.png)
