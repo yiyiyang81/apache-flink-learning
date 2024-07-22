@@ -66,4 +66,4 @@ This submits the jar file to the Flink cluster and runs the program.
 ## Flink Dashboard UI
 The following image shows the Flink UI while running the program the program. The Web UI is accessible at `http://localhost:8081/`.
 
-![alt text](./figures/running_program.png)
+![alt text](./concepts/figures/running_program.png)

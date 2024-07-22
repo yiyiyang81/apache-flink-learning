@@ -11,15 +11,7 @@ Data can be sourced through two ways, either by batch or by stream like Kafka, i
 
 - Core runtime: Distributed Streaming Dataflow Engine
 > Runtime describes software/instructions that are executed while your program is running, especially those instructions that you did not write explicitly, but are necessary for the proper execution of your program.
-- [**API**](./DataStreamAPI.md): This is the core API for processing. DataSet API is used for batch processing and DataStream API is used for streaming processing.
-    - Libraries under each suite:
-        - DataStream API:
-            - CEP: Complex Event Processing
-            - Table API&SQL: SQL like queries, relational
-         - DataSet API:
-            - FlinkML: Machine Learning
-            - Gelly: Graph processing
-            - Table API&SQL: SQL like queries, relational
+- [**DataStream API**](./DataStreamAPI.md): This is the core API for processing, transforming, and analyzing data streams.         
 - **Table API**: Declarative DSL( Domain Specific Language) for processing data.
 - **SQL API**: SQL queries can be used to process data.
 
